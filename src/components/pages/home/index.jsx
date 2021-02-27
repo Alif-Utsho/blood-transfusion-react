@@ -115,7 +115,7 @@ function Home() {
                     <Avatar className={classes.avatar}>
                         <OpacityIcon />
                     </Avatar>
-                    <Typography component="h1" variant="h3">
+                    <Typography component="h1" variant="h4">
                         Blood Transfusion
                     </Typography>
                     <form className={classes.form} noValidate>
