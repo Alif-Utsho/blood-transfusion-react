@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 import Home from '../pages/home'
+import Blood from '../pages/blood'
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/:name/:blood" component={Blood} name="Utsho" />
                 <Redirect to="/" />
             </Switch>
 
