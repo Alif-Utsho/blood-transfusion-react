@@ -109,7 +109,6 @@ function Form(props) {
                         >
                             Enter
                         </Button>
-
                         <Footer />
                     </form>
                 </div>
