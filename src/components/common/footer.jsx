@@ -2,7 +2,7 @@ import { Typography, Link, Box } from '@material-ui/core'
 
 function Footer() {
     return (
-        <Box mt={5}>
+        <Box mt={2}>
             <Typography variant="body2" color="textSecondary" align="center">
                 {'Copyright © '}
                 <Link color="inherit" href="https://facebook.com/utsho.aiub/">

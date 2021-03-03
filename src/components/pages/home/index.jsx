@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from './form'
-import Blood from '../blood'
+import { Redirect } from 'react-router-dom'
 
 class Home extends React.Component{
 
@@ -11,6 +11,9 @@ class Home extends React.Component{
 
     clickHandler = () => {
         alert(this.state.name + this.state.blood)
+        if (this.state.name && this.state.blood) {
+            <Redirect to="/home" />
+        }
     }
 
     getName = () => {

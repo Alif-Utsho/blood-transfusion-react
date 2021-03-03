@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-    Avatar, Button, CssBaseline, TextField, Link, Paper,
-    Box, Grid, Typography, MenuItem, makeStyles
+    Avatar, Button, CssBaseline, TextField, Paper,
+    Grid, Typography, MenuItem, makeStyles
 } from '@material-ui/core/';
 
 import OpacityIcon from '@material-ui/icons/Opacity';
@@ -16,23 +16,23 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         backgroundImage: 'url(https://source.unsplash.com/1600x900/?blurry)',
+        
     },
     image: {
         //backgroundImage: 'url(https://source.unsplash.com/random)',
         backgroundRepeat: 'no-repeat',
         backgroundColor:
-            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+        theme.palette.type === 'light',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },
     paper: {
-        margin: theme.spacing(10, 5),
+        margin: theme.spacing(6, 2),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
     },
     gridclass: {
-        margin: theme.spacing(1, 'auto'),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -54,10 +54,10 @@ function Form(props) {
     const classes = useStyles();
 
     return (
-        <Grid container component="main" className={classes.root}>
+        <Grid container justify="center" component="main" className={classes.root}>
             <CssBaseline />
             {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
-            <Grid color={'primary'} item xs={12} sm={8} md={5} component={Paper} elevation={10} square className={classes.gridclass}>
+            <Grid justify="center" container color={'primary'} item xs={12} sm={8} md={4} component={Paper} elevation={10} className={classes.gridclass}>
                 <div className={classes.paper}>
                     <Avatar className={classes.avatar}>
                         <OpacityIcon />
@@ -103,6 +103,7 @@ function Form(props) {
                             fullWidth
                             variant="contained"
                             color="primary"
+                            href="/alif/a+"
                             className={classes.submit}
                             onClick={props.clickHandler}
                         >
