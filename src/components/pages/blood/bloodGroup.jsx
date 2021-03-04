@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.success.main,
         color: theme.palette.inherite,
         textAlign: 'center',
-        letterSpacing: theme.spacing(1),
+        letterSpacing: theme.spacing(0.65),
         lineHeight: .7,
     }
 }));

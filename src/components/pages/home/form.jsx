@@ -58,7 +58,7 @@ function Form(props) {
             <CssBaseline />
             {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
             <Grid justify="center" container color={'primary'} item xs={12} sm={8} md={4} component={Paper} elevation={10} className={classes.gridclass}>
-                <div className={classes.paper}>
+                <Grid container xs={10} justify="center" className={classes.paper} >
                     <Avatar className={classes.avatar}>
                         <OpacityIcon />
                     </Avatar>
@@ -103,7 +103,7 @@ function Form(props) {
                             fullWidth
                             variant="contained"
                             color="primary"
-                            href="/alif/a+"
+                            // href={name}
                             className={classes.submit}
                             onClick={props.clickHandler}
                         >
@@ -111,7 +111,7 @@ function Form(props) {
                         </Button>
                         <Footer />
                     </form>
-                </div>
+                </Grid>
             </Grid>
         </Grid>
     );

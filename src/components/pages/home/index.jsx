@@ -1,19 +1,16 @@
 import React from 'react'
 import Form from './form'
-import { Redirect } from 'react-router-dom'
 
 class Home extends React.Component{
 
     state = {
         name: '',
-        blood: ''
+        blood: '',
+        link: ''
     }
 
     clickHandler = () => {
         alert(this.state.name + this.state.blood)
-        if (this.state.name && this.state.blood) {
-            <Redirect to="/home" />
-        }
     }
 
     getName = () => {
@@ -39,6 +36,7 @@ class Home extends React.Component{
                     clickHandler={this.clickHandler}
                     changeHandler={this.changeHandler}
                     selectHandler={this.selectHandler}
+                    path={this.state.link}
                 />
             </>
         )
