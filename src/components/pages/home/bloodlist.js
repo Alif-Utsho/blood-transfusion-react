@@ -1,34 +1,34 @@
 const currencies = [
     {
-        value: 'apos',
+        value: 'a+',
         label: 'A+',
     },
     {
-        value: 'bpos',
+        value: 'b+',
         label: 'B+',
     },
     {
-        value: 'abpos',
+        value: 'ab+',
         label: 'AB+',
     },
     {
-        value: 'opos',
+        value: 'o+',
         label: 'O+',
     },
     {
-        value: 'aneg',
+        value: 'a-',
         label: 'A-',
     },
     {
-        value: 'bneg',
+        value: 'b-',
         label: 'B-',
     },
     {
-        value: 'abneg',
+        value: 'ab-',
         label: 'AB-',
     },
     {
-        value: 'oneg',
+        value: 'o-',
         label: 'O-',
     },
 ];

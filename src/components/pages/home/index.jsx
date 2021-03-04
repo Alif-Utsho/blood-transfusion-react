@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './form'
+import { useHistory } from "react-router-dom";
 
 class Home extends React.Component{
 
@@ -9,12 +10,16 @@ class Home extends React.Component{
         link: ''
     }
 
-    clickHandler = () => {
-        alert(this.state.name + this.state.blood)
+    linkGenerate = () => {
+        this.setState({
+            link: this.state.name + '/' + this.state.blood
+        })
     }
 
-    getName = () => {
-        return this.state.name
+    clickHandler = () => {
+        //alert(this.state.name + this.state.blood)
+        var link= this.state.name + '/' + this.state.blood
+        this.props.history.push(link)
     }
 
     changeHandler = (event) => {
