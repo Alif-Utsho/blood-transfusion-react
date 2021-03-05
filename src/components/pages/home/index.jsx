@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from './form'
-import { useHistory } from "react-router-dom";
+
 
 class Home extends React.Component{
 
@@ -10,16 +10,15 @@ class Home extends React.Component{
         link: ''
     }
 
-    linkGenerate = () => {
-        this.setState({
-            link: this.state.name + '/' + this.state.blood
-        })
-    }
-
     clickHandler = () => {
         //alert(this.state.name + this.state.blood)
         var link= this.state.name + '/' + this.state.blood
-        this.props.history.push(link)
+        if (link === '/' || link===`${this.state.name}/` || link===`/${this.state.blood}`) {
+            alert('Enter all required item')
+        }
+        else {
+            this.props.history.push(link)
+        }
     }
 
     changeHandler = (event) => {

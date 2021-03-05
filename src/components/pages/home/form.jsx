@@ -57,8 +57,8 @@ function Form(props) {
         <Grid container justify="center" component="main" className={classes.root}>
             <CssBaseline />
             {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
-            <Grid justify="center" container color={'primary'} item xs={12} sm={8} md={4} component={Paper} elevation={10} className={classes.gridclass}>
-                <Grid container xs={10} justify="center" className={classes.paper} >
+            <Grid justify="center" container color={'primary'} item xs={12} sm={8} md={3} component={Paper} elevation={10} className={classes.gridclass}>
+                <Grid container item xs={10} justify="center" className={classes.paper} >
                     <Avatar className={classes.avatar}>
                         <OpacityIcon />
                     </Avatar>
@@ -85,7 +85,6 @@ function Form(props) {
                             fullWidth
                             id="outlined-select-blood"
                             label="Blood Group"
-                            name="bloodgroup"
                             onChange={props.selectHandler}
                             select
                         >

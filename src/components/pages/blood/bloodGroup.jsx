@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Avatar, CssBaseline, Paper, ListItemIcon,
+    Avatar, CssBaseline, Paper, ListItemIcon, Button,
     Grid, Typography, makeStyles
 } from '@material-ui/core/';
 
@@ -124,7 +124,7 @@ const donateListCreate = (bloodDist, bloodname) => {
     return bloodtype.map(list => {
         return list.donate.map((item, i) => {
             return (
-                <ListItem button key={i}>
+                <ListItem button key={i}  >
                     <ListItemIcon>
                         <ArrowRightRoundedIcon />
                     </ListItemIcon>
@@ -143,9 +143,9 @@ const BloodGroup = ({ name, blood, bloodDist }) => {
             <Grid container component="main" item className={classes.root}>
                 <CssBaseline />
                 {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
-                <Grid container color={'primary'} item xs={12} sm={8} md={6} component={Paper} elevation={10} square className={classes.gridclass}>
-                    <div className={classes.paper}>
-                        <Avatar className={classes.avatar}>
+                <Grid container color={'primary'} item xs={12} sm={8} md={5} justify="center" component={Paper} elevation={10} square className={classes.gridclass}>
+                    <Grid className={classes.paper} item container xs={12} sm={12} md={12} >
+                        <Avatar className={classes.avatar} >
                             <OpacityIcon />
                         </Avatar>
                         <Typography component="h1" variant="h4" >
@@ -159,9 +159,9 @@ const BloodGroup = ({ name, blood, bloodDist }) => {
                             <Grid color={'primary'} item xs={12} sm={12} md={12} className={classes.gridclass} >
                                 <Grid container item className={classes.Gridroot} spacing={2}>
                                     <Grid container  item xs={12} direction="row" justify="center" /*alignItems="center"*/  >
-                                        <Grid xs={12} sm={5} item className={classes.shadow}  >
-                                            <Typography component="h1" variant="h6" spacing={3}>
-                                                You can Donate to these Blood groups
+                                        <Grid item xs={12} sm={5} className={classes.shadow}  >
+                                            <Typography component="h1" variant="h6" spacing={3} color='textSecondary' >
+                                                You can Donate Bloods to-
                                             </Typography>
                                             
                                             <Grid item className={classes.list}>
@@ -170,11 +170,11 @@ const BloodGroup = ({ name, blood, bloodDist }) => {
                                                 </List>
                                             </Grid>
                                         </Grid>
-                                        <Grid xs={12} sm={5} item className={classes.shadow}  >
-                                            <Typography component="h1" variant="h6" spacing={3}>
-                                                You can Receive from these Blood groups
+                                        <Grid item xs={12} sm={5} className={classes.shadow}  >
+                                            <Typography component="h1" variant="h6" spacing={3} color='textSecondary'  >
+                                                You can Receive Bloods from-
                                             </Typography>
-                                            <Grid className={classes.list}>
+                                            <Grid item className={classes.list}>
                                                 <List component="nav" aria-label="main mailbox folders">
                                                     {receiveListCreate(bloodDist, blood)}
                                                 </List>
@@ -184,9 +184,20 @@ const BloodGroup = ({ name, blood, bloodDist }) => {
                                     </Grid>
                                 </Grid>
                             </Grid>
+                        
+                            <Button
+                                variant="outlined"
+                                color="primary"
+                                href="/"
+                                className={classes.submit}
+
+                            >
+                                Back to Home
+                                </Button>
+                            
                         </>
                     <Footer />
-                    </div>
+                    </Grid>
                 </Grid>
             </Grid>
         </>
